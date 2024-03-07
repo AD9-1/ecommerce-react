@@ -1,0 +1,16 @@
+.newcollections {
+  h1 {
+    width: 30%;
+    font-size: 50px;
+    font-weight: 600;
+    color: #909;
+    margin: 40px auto;
+  }
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin: 80px 0 50px 0;
+  }
+}

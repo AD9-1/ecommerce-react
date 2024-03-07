@@ -1,0 +1,49 @@
+.newsletter {
+  width: 65%;
+  margin: auto;
+  background: linear-gradient(270deg, rgba(119, 126, 119, 0.37), #e5dada);
+  //height: 40vh;
+  margin-bottom: 40px;
+  padding: 40px 40px;
+  h1 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #909;
+    margin: auto;
+  }
+  p {
+    color: rgb(91, 87, 91);
+    font-size: 24px;
+    margin: 20px;
+  }
+  &__email {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    width: 70%;
+    height: 70px;
+    border-radius: 80px;
+    border: 1px solid #909;
+    input {
+      width: 60%;
+      height: 45px;
+      border: none;
+      border-radius: 80px;
+      outline: none;
+      margin: auto;
+
+      padding-left: 20px;
+    }
+    ::placeholder {
+      font-size: 1.2rem;
+    }
+    button {
+      width: 30%;
+      height: 70px;
+      border-radius: 80px;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.popular {
+  h1 {
+    width: 40%;
+    font-size: 50px;
+    font-weight: 600;
+    color: #909;
+    margin: 40px auto;
+  }
+  &__item {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+}

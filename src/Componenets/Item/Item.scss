@@ -1,0 +1,24 @@
+.item {
+  width: 230px;
+  img {
+    height: 300px;
+    max-width: 100%;
+  }
+  p {
+    margin: 6px 0px;
+  }
+  &__prices {
+    display: flex;
+    gap: 20px;
+    &__old {
+      font-weight: 600;
+      font-size: 18px;
+      color: #909;
+      text-decoration: line-through;
+    }
+  }
+  :hover {
+    transform: scale(1.05);
+    transition: 0.6s;
+  }
+}
