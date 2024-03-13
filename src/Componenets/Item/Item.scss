@@ -1,18 +1,20 @@
 .item {
   width: 230px;
+  font-size: 14px;
   img {
-    height: 300px;
+    height: 230px;
     max-width: 100%;
   }
   p {
-    margin: 6px 0px;
+    text-align: center;
+    padding: 0px 6px;
   }
   &__prices {
     display: flex;
+    justify-content: center;
     gap: 20px;
     &__old {
       font-weight: 600;
-      font-size: 18px;
       color: #909;
       text-decoration: line-through;
     }
