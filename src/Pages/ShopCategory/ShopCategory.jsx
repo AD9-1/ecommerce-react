@@ -5,7 +5,7 @@ import ArrowDropDownSharpIcon from "@mui/icons-material/ArrowDropDownSharp";
 import Item from "../../Componenets/Item/Item";
 
 const ShopCategory = ({ banner, category }) => {
-  const all_data = useContext(ShopContext);
+  const {all_data} = useContext(ShopContext);
 
   return (
     <div className="shopcategory">

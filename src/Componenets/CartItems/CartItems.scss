@@ -1,0 +1,40 @@
+.cartitems {
+  margin: 30px 50px;
+  height:90vh;
+  hr {
+    height: 1px;
+    background-color: #ccc;
+    border: 0;
+    margin: 0px 20px;
+  }
+  &-main {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+    font-size: 18px;
+    font-size: 500;
+  }
+  &-value {
+    font-size: 17px;
+    font-weight: 600;
+    &-icon {
+      height: 60px;
+    }
+    &-delete {
+      cursor: pointer;
+      color: red;
+      width: 65%;
+      margin: 0px auto;
+    }
+    button {
+      height: 40px;
+      width: 50%;
+      background: white;
+      border: 2px solid #ebebeb;
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+}
