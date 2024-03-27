@@ -4,7 +4,7 @@ import "./CartItems.scss";
 import { ShopContext } from "../../Context/ShopContext";
 
 export default function CartItems() {
-  const { cartItems, all_data, removeFromCart } = useContext(ShopContext);
+  const { cartItems, all_data, removeFromCart} =useContext(ShopContext);
 
   const itemsInCart = Object.entries(cartItems)
     .filter(([itemId, quantity]) => quantity > 0)
@@ -14,6 +14,10 @@ export default function CartItems() {
 
       return itemDetails;
     });
+  let total = 0;
+  let subtotal = 0;
+  itemsInCart.forEach((item) => (total += item.new_price * item.quantity));
+  subtotal = total;
 
   return (
     <div className="cartitems">
@@ -50,15 +54,35 @@ export default function CartItems() {
         );
       })}
       <div className="cartitems-down">
-        <div className="cartitems-down-heading">
-            <h1>Cart Totals</h1>
-        </div>
-        <div className="cartitems-down-subtotal">
-            <p>Subtotal</p>
-            <p>${0}</p>
-        </div>
-        <div className="cartitems-down-subtotal">
+        <div className="cartitems-down-total">
+          <h1>Cart Totals</h1>
 
+          <div>
+            <div className="cartitems-down-total-subtotal">
+              <p>Subtotal</p>
+              <p>${subtotal}</p>
+            </div>
+
+            <div className="cartitems-down-total-subtotal">
+              <p>Shipping Fee</p>
+              <p>Free</p>
+            </div>
+            <hr className="hr" />
+            <div className="cartitems-down-total-subtotal">
+              <h3>Total</h3>
+              <h3>${total}</h3>
+            </div>
+        
+            <button>Proceed To Checkout</button>
+          </div>
+        </div>
+
+        <div className="cartitems-down-promo">
+          <p>Enter promotion code</p>
+          <div className="cartitems-down-promo-code">
+            <input type="text" />
+            <button>Submit</button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,23 +1,39 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logo from "../../Assets/logo.png";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import "./Navbar.scss";
-import { NavLink } from "react-router-dom";
+import MenuIcon from "@mui/icons-material/Menu";
+import { NavLink, useLocation } from "react-router-dom";
+import { ShopContext } from "../../Context/ShopContext";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("shop");
+  const { getTotalCartItems } = useContext(ShopContext);
+  const [expandbar, setExpandbar] = useState(false);
+  const location = useLocation();
+  let p = getTotalCartItems();
+  useEffect(() => {
+    setExpandbar(false);
+  }, [location]);
+  const handleClick = () => {
+    setExpandbar(true);
+  };
   return (
     <div className="navbar">
       <div className="navbar__left">
         <img src={logo} /> <h2>ShopZone</h2>
       </div>
-      <ul className="navbar__middle">
+      <div className="toggleBar">
+        <button onClick={handleClick}>
+          <MenuIcon className="toggleBar__icon"/>
+        </button>
+      </div>
+      <ul className={expandbar ? "navbar__false" : "navbar__middle"}>
         <li
           className={menu === "shop" ? "navbar__middle__active" : ""}
           onClick={() => setMenu("shop")}
         >
           <NavLink to="/" style={{ textDecoration: "none", color: "red" }}>
-            {" "}
             Shop
           </NavLink>
         </li>
@@ -26,7 +42,6 @@ const Navbar = () => {
           onClick={() => setMenu("men")}
         >
           <NavLink to="/mens" style={{ textDecoration: "none", color: "red" }}>
-            {" "}
             Men
           </NavLink>
         </li>
@@ -51,6 +66,7 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
+
       <div className="navbar__right">
         <div className="navbar__right__button">
           <NavLink to="/login" style={{ textDecoration: "none", color: "red" }}>
@@ -61,10 +77,10 @@ const Navbar = () => {
           {" "}
           <AddShoppingCartIcon
             className="navbar__right__cart"
-            style={{ fontSize: "50px" }}
+            style={{ fontSize: "25px" }}
           />
         </NavLink>
-        <div className="navbar__right__count">0</div>
+        <div className="navbar__right__count">{p}</div>
       </div>
     </div>
   );

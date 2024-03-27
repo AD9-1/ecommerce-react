@@ -20,7 +20,7 @@ const ShopCategory = ({ banner, category }) => {
         {all_data
           .filter((item) => item.category === category)
           .map((filteredItem) => (
-            <Item
+            <Item className="shopcategory-products-item"
               id={filteredItem.id}
               name={filteredItem.name}
               image={filteredItem.image}

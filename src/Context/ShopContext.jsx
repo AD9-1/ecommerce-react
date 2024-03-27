@@ -7,8 +7,18 @@ const getdefaultCart = () => {
   for (let index = 0; index < all_products.length + 1; index++) cart[index] = 0;
   return cart;
 };
+
 const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getdefaultCart());
+
+  const getTotalCartItems = () => {
+    let sum = 0;
+    Object.values(cartItems).forEach((quantity) => {
+      if (quantity > 0) sum += quantity;
+    });
+    console.log("The total", sum);
+    return sum;
+  };
 
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
@@ -18,9 +28,6 @@ const ShopContextProvider = (props) => {
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
-  // useEffect(() => {
-  //   console.log(cartItems);
-  // }, [cartItems]);
 
   return (
     <ShopContext.Provider
@@ -29,6 +36,7 @@ const ShopContextProvider = (props) => {
         cartItems: cartItems,
         addToCart: addToCart,
         removeFromCart: removeFromCart,
+        getTotalCartItems: getTotalCartItems,
       }}
     >
       {props.children}

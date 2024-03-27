@@ -2,13 +2,14 @@
   display: flex;
   justify-content: space-evenly;
   padding: 20px 0px;
+  align-items: center;
   &__left {
     display: flex;
     align-items: center;
     width: 30%;
     justify-content: center;
     color: red;
-    &NavLink {
+    NavLink {
       text-decoration: none;
     }
     h2 {
@@ -63,6 +64,103 @@
       background-color: burlywood;
       text-align: center;
       color: red;
+    }
+  }
+}
+.toggleBar {
+  display: none;
+}
+@media (min-width: 800px) and (max-width: 1020px) {
+  .navbar {
+    padding: 12px 20px;
+    &__left {
+      padding: 0;
+      width: 25%;
+      img {
+        transform: scale(0.7);
+        box-sizing: border-box;
+      }
+      h2 {
+        font-size: 23px;
+      }
+    }
+    &__middle {
+      width: 40%;
+      gap: 20px;
+    }
+    &__right {
+      width: 30%;
+      &__button {
+        width: 30%;
+      }
+      &__count {
+        width: 20px;
+        margin-left: -10px;
+        margin-top: -40px;
+      }
+    }
+  }
+}
+@media (max-width: 799px) {
+  .navbar {
+    position: relative;
+    justify-content: space-between;
+    &__left {
+      img {
+        width: 50px;
+      }
+      h2 {
+        font-size: 24px;
+      }
+    }
+    &__middle {
+      display: none;
+    }
+    .toggleBar {
+      display: block;
+      &__icon {
+        color: red;
+      }
+    }
+    &__false {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      height: 200px;
+      background-color: azure;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      list-style: none;
+      top: 90px;
+      gap: 30px;
+      padding: 0;
+    }
+    &__right {
+      &__button {
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 600px) {
+  .navbar {
+    justify-content: space-around;
+    &__left {
+      img {
+        transform: scale(0.8);
+      }
+      h2 {
+        margin: 0;
+        transform: scale(0.9);
+      }
+    }
+  }
+  .navbar__right__button {
+    button {
+      font-size: 1rem;
     }
   }
 }

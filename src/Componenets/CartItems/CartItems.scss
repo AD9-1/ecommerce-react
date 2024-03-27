@@ -1,6 +1,6 @@
 .cartitems {
   margin: 30px 50px;
-  height:90vh;
+  height: 100%;
   hr {
     height: 1px;
     background-color: #ccc;
@@ -36,5 +36,58 @@
       font-size: 12px;
       font-weight: 600;
     }
+  }
+  &-down {
+    display: flex;
+    justify-content: space-around;
+    margin: 100px 0px;
+    &-total {
+      width: 50%;
+      &-subtotal {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 10px;
+      }
+      button {
+        width: 200px;
+        height: 40px;
+        margin: auto;
+        background-color: rgba(234, 25, 25, 0.927);
+        color: white;
+        border-radius: 3px;
+        border: none;
+        font-size: 18px;
+      }
+    }
+    &-promo {
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      &-code {
+        background-color: #eaeaea;
+        height: 35px;
+        input {
+          box-sizing: border-box;
+          height: 100%;
+          background: transparent;
+          border: none;
+        }
+        button {
+          height: 90%;
+          width: 74px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  .hr {
+    margin: 0;
+    height: 2px;
+  }
+  p,
+  h3 {
+    font-size: 20px;
   }
 }

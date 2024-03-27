@@ -17,6 +17,7 @@
     margin: 20px;
   }
   &__email {
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     background-color: white;
@@ -31,7 +32,6 @@
       border-radius: 80px;
       outline: none;
       margin: auto;
-
       padding-left: 20px;
     }
     ::placeholder {
