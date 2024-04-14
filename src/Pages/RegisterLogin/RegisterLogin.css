@@ -1,0 +1,47 @@
+.registerlogin {
+  padding-bottom: 100px;
+  padding-top: 100px;
+}
+.registerlogin-container {
+  width: 30%;
+  margin: auto;
+  padding: 40px;
+  background-color: antiquewhite;
+}
+.registerlogin-container h1 {
+  font-size: 36px;
+  margin: 20px 0px;
+}
+.registerlogin-container-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.registerlogin-container-fields input {
+  height: 40px;
+  padding-left: 20px;
+  outline: none;
+  border: 1px solid rgba(204, 204, 204, 0.8);
+}
+.registerlogin-container button {
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+  color: white;
+  background-color: red;
+  border: none;
+  margin-bottom: 10px;
+}
+.registerlogin-container-signup {
+  font-weight: 18px;
+  margin-top: 5px;
+}
+.registerlogin-container-signup span {
+  color: red;
+  font-weight: 500;
+}
+.registerlogin-container-agree {
+  display: flex;
+  gap: 5px;
+}/*# sourceMappingURL=RegisterLogin.css.map */

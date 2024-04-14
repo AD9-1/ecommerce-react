@@ -105,9 +105,35 @@
     }
   }
 }
-@media(max-width:500px)
-{
-  .hero{
+@media (max-width: 500px) {
+  .hero {
     flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    &__left {
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 30px;
+      }
+      &__hand {
+        .image {
+          width: 55px;
+        }
+      }
+      &__latest {
+        margin-top: 15px;
+        width: 150px;
+        gap: 5px;
+        font-size: 14px;
+        img {
+          width: 20px;
+        }
+      }
+    }
+    &__right {
+      display: none;
+    }
   }
 }
