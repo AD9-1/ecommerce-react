@@ -5,7 +5,7 @@ import StarBorderIcon from "@mui/icons-material/StarBorder";
 import { ShopContext } from "../../Context/ShopContext";
 
 const ProductDisplay = ({ product }) => {
-  const { addToCart, cartItems } = useContext(ShopContext);
+  const { addToCart } = useContext(ShopContext);
   return (
     <div className="productdisplay">
       <div className="productdisplay-left">
@@ -47,9 +47,9 @@ const ProductDisplay = ({ product }) => {
           </div>
         </div>
         <button onClick={() => addToCart(product.id)}>Add to Cart</button>
-        
+
         <p className="productdisplay-right-category">
-          <span>Category :</span> Women, T-Shirt, Crop-Top
+          <span>Category :</span> {product.category}, T-Shirt, Crop-Top
         </p>
         <p className="productdisplay-right-category">
           <span>Tags :</span> Modern , Latest

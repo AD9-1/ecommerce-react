@@ -39,12 +39,12 @@ export default function CartItems() {
                 className="cartitems-value-icon"
                 alt={item.name}
               />
-              <p>{item.name}</p>
-              <p>${item.new_price}</p>
+              <p className="cartitems-value-title">{item.name}</p>
+              <p className="cartitems-value-price">${item.new_price}</p>
               <button className="cartitems-value-quantity">
                 {item.quantity}
               </button>
-              <p>${item.new_price * item.quantity}</p>
+              <p className="cartitems-value-total">${item.new_price * item.quantity}</p>
               <div className="cartitems-value-delete">
                 <DeleteIcon onClick={() => removeFromCart(item.id)} />
               </div>

@@ -14,6 +14,16 @@
     margin: auto;
     border: 1px solid orange;
     padding: 5px 30px;
+    @media (max-width: 800px) {
+      width: 60%;
+      span{
+        font-size: 12px;
+
+      }
+      p{
+        font-size: 12px;
+      }
+    }
     &-sort {
       display: flex;
       align-items: center;
@@ -26,6 +36,11 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin: 20px 170px;
     row-gap: 50px;
+    @media (max-width: 1000px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin:20px 100px;
+    }
   }
   &-loadmore {
     width: 20%;
@@ -39,5 +54,10 @@
     font-size: 24px;
     font-weight: 500;
     padding-top: 20px;
+    @media(max-width:800px)
+    {
+      font-size: 15px;
+      padding:25px 0px 0px;
+    }
   }
 }

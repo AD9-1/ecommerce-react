@@ -2,7 +2,6 @@
   width: 65%;
   margin: auto;
   background: linear-gradient(270deg, rgba(119, 126, 119, 0.37), #e5dada);
-  //height: 40vh;
   margin-bottom: 40px;
   padding: 40px 40px;
   h1 {
@@ -10,11 +9,21 @@
     font-weight: 600;
     color: #909;
     margin: auto;
+    @media(max-width:800px)
+    {
+      font-size:30px;
+    }
   }
   p {
     color: rgb(91, 87, 91);
-    font-size: 24px;
+    font-size: 28px;
     margin: 20px;
+    @media(max-width:800px)
+    {
+      font-size: 23px;
+      margin:20px 0px;
+
+    }
   }
   &__email {
     box-sizing: border-box;
@@ -25,6 +34,11 @@
     height: 70px;
     border-radius: 80px;
     border: 1px solid #909;
+    @media(max-width:800px)
+    {
+      width:auto;
+      height:50px;
+    }
     input {
       width: 60%;
       height: 45px;
@@ -32,18 +46,24 @@
       border-radius: 80px;
       outline: none;
       margin: auto;
-      padding-left: 20px;
     }
     ::placeholder {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
     button {
-      width: 30%;
-      height: 70px;
+      width: fit-content;
+      padding:20px;
+      height: 65px;
       border-radius: 80px;
       border: none;
       font-size: 1.2rem;
       cursor: pointer;
+      @media(max-width:800px)
+      {
+        height:45px;
+        font-size: 1.1rem;
+        padding:10px;
+      }
     }
   }
 }
